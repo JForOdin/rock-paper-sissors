@@ -27,66 +27,59 @@ class Game
         }
         return computersChoice;
     }
-    getPlayerWins()
+    lose(playersChoice,computersChoice)
     {
-        return this.playerWins;
+        this.computerWins++;
+        console.log("you lose");
+        this.action.textContent = "You chose : "+playersChoice+" and the computer chose: "+computersChoice+". You lose this round!";
     }
-    getComputerWins()
+    win(playersChoice,computersChoice)
     {
-        return this.computerWins;
+        this.playerWins++;
+        console.log("you win!");
+
+        this.action.textContent = "You chose : "+playersChoice+" and the computer chose: "+computersChoice+". You win this round!";
     }
-    update(playersChoice)
+    updateGame(playersChoice)
     {
         let computersChoice = "";
         computersChoice =  this.getComputersChoice();
         console.log("You chose "+playersChoice+" and the computer chose: "+computersChoice);
         this.getWinnerOfRound(playersChoice,computersChoice);
-       
-
     }
     getWinnerOfRound(playersChoice,computersChoice)
     {
         this.action = document.getElementById("c-action");
         if(playersChoice=="rock" && computersChoice=="paper")
         {
-            console.log("you lose");
-            this.action.textContent = "you lose!";
-            this.computerWins++;
+            this.lose(playersChoice,computersChoice);
         }
         else if(playersChoice=="scissors" && computersChoice=="paper")
         {
-            console.log("you win!");
-            this.action.textContent = "you win!";
-            this.playerWins++;
+            this.win(playersChoice,computersChoice);            
         }
         else if(playersChoice=="scissors" && computersChoice=="rock")
         {
-            console.log("you lose");
-            this.computerWins++;
-            this.action.textContent = "you lose!";
+            this.lose(playersChoice,computersChoice);
+
         }
         else if(playersChoice=="paper" && computersChoice=="scissors")
         {
-            console.log("you lose");
-            this.computerWins++;
-            this.action.textContent = "you lose!";
+            this.lose(playersChoice,computersChoice);
+
         }
         else if(playersChoice=="paper" && computersChoice=="rock")
         {
-            console.log("you win!");
-            this.playerWins++;
-            this.action.textContent = "you win!";
+            this.win(playersChoice,computersChoice);
         }
         else if(playersChoice=="rock" && computersChoice=="scissors")
         {
-            console.log("you win");
-            this.playerWins++;
-            this.action.textContent = "you win!";
+            this.win(playersChoice,computersChoice);
         }
         else
         {
             console.log("Tie!");
-            this.action.textContent = "this round was a draw!";
+            this.action.textContent = "You both chose "+playersChoice+". This round was a draw!";
         }
     }
     
