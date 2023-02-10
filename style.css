@@ -1,0 +1,16 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    background-color: darkgrey;
+    color: white;
+}
+.game-rules-div {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    background-color:darkkhaki;
+}
+.icons {
+    display: flex;
+    background-color: darkgrey;
+}
