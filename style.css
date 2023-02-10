@@ -22,6 +22,9 @@ h1 {
 
    
 }
+img {
+    border-radius: 20px;
+}
 .icons {
     background-color: darkgrey;
     justify-content: space-around;
