@@ -1,3 +1,7 @@
+body {
+    font-family: "Gill Sans", sans-serif;
+    
+}
 h1 {
     display: flex;
     justify-content: center;
@@ -11,10 +15,9 @@ h1 {
     background-color:darkkhaki;
 }
 .icons {
-    display: flex;
     background-color: darkgrey;
     justify-content: space-around;
-    
+    display: flex;
 }   
 #c-action {
     color:red;
