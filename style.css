@@ -13,4 +13,6 @@ h1 {
 .icons {
     display: flex;
     background-color: darkgrey;
-}
+    justify-content: space-around;
+    
+}   
