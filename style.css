@@ -13,7 +13,6 @@ h1 {
 .game-rules-div {
     display: flex;
     justify-content: center;
-    margin: 10px;
     background-color:darkkhaki;
     max-width: 400px;
     text-align: center;
