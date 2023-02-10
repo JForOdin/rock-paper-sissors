@@ -16,3 +16,8 @@ h1 {
     justify-content: space-around;
     
 }   
+#c-action {
+    color:red;
+    font-size: large;
+    text-align: center;
+}
