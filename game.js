@@ -1,16 +1,13 @@
 class Game 
 {
-    
     constructor()
     {
         this.gameScore = 0;
         this.playerWins = 0;
         this.computerWins = 0;
-  
     }
     getComputersChoice()
     {
-        //return  Math.floor(Math.random()*3);
         let randNumber = Math.floor(Math.random()*3);
         let computersChoice = "";
         switch(randNumber)
@@ -37,7 +34,6 @@ class Game
     {
         this.playerWins++;
         console.log("you win!");
-
         this.action.textContent = "You chose : "+playersChoice+" and the computer chose: "+computersChoice+". You win this round!";
     }
     updateGame(playersChoice)
