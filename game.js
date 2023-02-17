@@ -46,37 +46,22 @@ class Game
     getWinnerOfRound(playersChoice,computersChoice)
     {
         this.action = document.getElementById("c-action");
-        if(playersChoice=="rock" && computersChoice=="paper")
-        {
-            this.lose(playersChoice,computersChoice);
-        }
-        else if(playersChoice=="scissors" && computersChoice=="paper")
-        {
-            this.win(playersChoice,computersChoice);            
-        }
-        else if(playersChoice=="scissors" && computersChoice=="rock")
-        {
-            this.lose(playersChoice,computersChoice);
-
-        }
-        else if(playersChoice=="paper" && computersChoice=="scissors")
-        {
-            this.lose(playersChoice,computersChoice);
-
-        }
-        else if(playersChoice=="paper" && computersChoice=="rock")
-        {
-            this.win(playersChoice,computersChoice);
-        }
-        else if(playersChoice=="rock" && computersChoice=="scissors")
-        {
-            this.win(playersChoice,computersChoice);
-        }
-        else
+        if(playersChoice==computersChoice)
         {
             console.log("Tie!");
             this.action.textContent = "You both chose "+playersChoice+". This round was a draw!";
         }
+        else if(playersChoice=="rock" && computersChoice=="paper" || 
+        playersChoice=="paper" && computersChoice=="scissors" )
+        {
+            this.lose(playersChoice,computersChoice);
+        }
+        else
+        {
+            this.win(playersChoice,computersChoice);            
+        }
+       
+       
     }
     
 }

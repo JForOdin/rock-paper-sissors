@@ -1,17 +1,17 @@
 let newGame = new Game();
-function chooseRock()
+chooseRock = () => 
 {
    newGame.updateGame("rock");
 }
-function choosePaper()
+choosePaper = () =>
 {
    newGame.updateGame("paper");
 }
-function chooseScissors()
+chooseScissors = () =>
 {
     newGame.updateGame("scissors");
 }
-function reloadGame()
+reloadGame = () =>
 {
     setTimeout(function(){
         location.reload();
